@@ -5,6 +5,7 @@
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
 sudo apt-get install -y git-core
+sudo apt-get install -y curl
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 # install some useful packages
@@ -37,11 +38,19 @@ sudo apt-add-repository -y ppa:cassou/emacs
 sudo apt-get update
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
+# Install heroku
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Some stuff to work with foreman
+npm install sequelize
+npm install pg
+
+
 # install .vimrc
 if [ -d $HOME/.vimrc ]; then
     mv $HOME/.vimrc .vimrc.old
 fi
-mv ./.vimrc $HOME/
+cp ./.vimrc $HOME/
 
 # git pull and install dotfiles as well
 cd $HOME
