@@ -42,7 +42,8 @@ sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 # Some stuff to work with foreman
-npm install sequelize
+npm install express 
+npm install sequelize # ORM
 npm install pg
 
 
